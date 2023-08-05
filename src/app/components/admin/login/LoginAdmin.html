@@ -1,0 +1,30 @@
+
+<div class="card flex justify-content-center">
+  <p-card header="Se Connecter" subheader="Administrateur" [style]="{ width: '360px' }">
+      <ng-template pTemplate="header">
+          <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+      </ng-template>
+
+    <div class="card">
+          <div class="flex align-items-center justify-content-center">
+              <div class="p-fluid">
+                <p [style]="{color:'red'}">{{erreur}}</p>
+                  <div class="field">
+                      <label for="username">Identification</label>
+                      <input pInputText  id="username" type="text"  [(ngModel)]="identification"/>
+                  </div>
+                  <div class="field">
+                      <label for="password">Mot de passe</label>
+                      <input pInputText id="password" type="password" [(ngModel)]="mdp"/>
+                  </div>
+                  <p-button label="Valider" (onClick)="onValiderClick()"></p-button>
+              </div>
+          </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <div class="flex align-items-center justify-content-center">
+        <p-button label="S'inscrire" icon="pi pi-user-plus" styleClass="p-button-success"></p-button>
+      </div>
+  </ng-template>
+  </p-card>
+</div>
